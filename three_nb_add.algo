@@ -1,0 +1,28 @@
+ALGORITHM algorithm_name
+VAR
+    compt,voy,let,esp,mot : INTEGER;
+    phrase:STRING;
+BEGIN
+phrase :=" Bienvenue à GOMYCODE.";
+compt :=0;
+let:=0;
+esp:=0;
+mot:=0;
+DO
+
+SWITCH (compt) DO
+    phrase(compt) = "e" or "o" or "a" or "y" or "i": voy:=voy+1 break;
+    phrase(compt) = "_" mot:=mot++ ; esp:=esp++ ; break;
+    default : break;
+END_SWITCH
+
+compt:=compt+1;
+until (phrase(compt)=".") 
+END_WHILE
+
+    let:=phrase(lenght)-1-esp;
+    write(voy);
+    write(mot);
+    write(let);
+
+END
